@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import handleLogin from "../utils/loginService";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -12,10 +13,11 @@ export default function Login() {
   const handelPassword = (e) => {
     setPassword((pre) => e.target.value);
   };
-  const handelSubmit = (e) =>{
-    e.preventDefault()
-    alert(`username=${username}, password=${password}`)
-  }
+  const handelSubmit = (e) => {
+    e.preventDefault();
+    const reqBody = {username: username, password: password}
+    handleLogin(reqBody)
+  };
 
   return (
     <div>
