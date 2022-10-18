@@ -62,7 +62,6 @@ const Flights = () => {
     <div>
     <Button style={{marginLeft: "50px", marginTop: "30px"}} variant="outlined" onClick={navigateToDeparturesArrivals} startIcon={<FlightTakeoffOutlinedIcon />} endIcon={<FlightLandOutlinedIcon />} color="secondary">Departures & Arrivals</Button>
       <div className="table-center">
-      <InputSelect label="Filter by Airline" handleChange={setRows} createData={createData}/>
       </div>
       <div className='table-center'>
       <Paper sx={{ width: '100%', overflow: 'hidden' }}>

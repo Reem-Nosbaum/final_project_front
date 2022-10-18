@@ -24,7 +24,7 @@ const InputSelect = (props) => {
         console.log(e.target)
         setAirline(e.target.value);
         if (e.target.value === 'All Airlines') {
-            axios.get('http://localhost:5000/flights').then(res => {
+            axios.get('http://localhost:5000/flightss').then(res => {
                 const flights = res.data.data
                 const newRows = []
                 flights.forEach(flight => newRows.push(props.createData(flight.airline_company, flight.origin_county, flight.destination_county, 
