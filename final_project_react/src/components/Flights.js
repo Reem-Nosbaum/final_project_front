@@ -9,6 +9,8 @@ import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import Button from '@mui/material/Button';
 import InputSelect from "./input-elements/inputSelect";
+import FlightLandOutlinedIcon from '@mui/icons-material/FlightLandOutlined';
+import FlightTakeoffOutlinedIcon from '@mui/icons-material/FlightTakeoffOutlined';
 
 const columns = [
   { id: "airline_company", label: "Airline", minWidth: 170 },
@@ -58,7 +60,7 @@ const Flights = () => {
 
   return (
     <div>
-    <Button style={{marginLeft: "50px", marginTop: "30px"}} variant="outlined" onClick={navigateToDeparturesArrivals} color="secondary">Departures & Arrivals</Button>
+    <Button style={{marginLeft: "50px", marginTop: "30px"}} variant="outlined" onClick={navigateToDeparturesArrivals} startIcon={<FlightTakeoffOutlinedIcon />} endIcon={<FlightLandOutlinedIcon />} color="secondary">Departures & Arrivals</Button>
       <div className="table-center">
       <InputSelect label="Filter by Airline" handleChange={setRows} createData={createData}/>
       </div>
