@@ -15,8 +15,8 @@ export default function Login() {
   };
   const handelSubmit = (e) => {
     e.preventDefault();
-    const reqBody = {username: username, password: password}
-    handleLogin(reqBody)
+    const reqBody = { username: username, password: password };
+    handleLogin(reqBody);
   };
 
   return (
